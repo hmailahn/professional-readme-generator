@@ -7,7 +7,11 @@ const fs = require('fs');
 // TODO: Create an array of questions for user input
 // const questions = [];
 
-const promptUser = () => {
+projectDetails = [];
+
+const promptUser = projectDetails => {
+    ///if there's no 'projects arrway property, create on
+    
     return inquirer.prompt([
         {
             type: 'input',
@@ -118,10 +122,10 @@ const promptUser = () => {
 
 promptUser()
 .then(projectDetails => {
-    const readMeFile = generateMarkDown(projectDetails)
+    const readMeFile = generateMarkdown(projectDetails)
     fs.writeFile('./readMeOutput.md', readMeFile, err => {
         if (err) throw new Error(err);
-        console.log('Page created! Check out index.html in this directory to see it!');
+        console.log('Page created! Check out readMeOutput in this directory to see it!');
         console.log(projectDetails)
         console.log(projectDetails.title) 
     })
@@ -130,8 +134,19 @@ promptUser()
 // // TODO: Create a function to write README file
 // function writeToFile(fileName, data) { }
 
-// // TODO: Create a function to initialize app
-// function init() { }
 
-// // Function call to initialize app
-// init();
+//1/23 4:49pm - 
+// -table of contents confirm-
+//      -take out input for table of contents 
+//      -work on table of contents function in generateMarkdown
+//      -add to string for read me
+//      -figure out how link table of contents
+// -work on readme string output
+//      -start placing readme string output
+//      -add in date in string output
+//      -fix functions to write string output onto readme file
+//-License (generateMarkdown file)
+//      -Create a function that returns a license badge based on which license is passed in
+//          -If there is no license, return an empty string 
+//      -Create a function that returns the license link
+//          -If there is no license, return an empty string
