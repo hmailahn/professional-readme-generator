@@ -7,15 +7,15 @@ const fs = require('fs');
 // TODO: Create an array of questions for user input
 // const questions = [];
 
-projectDetails = [];
 
-const promptUser = projectDetails => {
+
+const promptUser = ()=> {
     ///if there's no 'projects arrway property, create on
     
     return inquirer.prompt([
         {
             type: 'input',
-            name: 'projectTitle',
+            name: 'title',
             message: 'What is the title of your Project? (required)',
             validate: nameInput => {
                 if (nameInput) {
@@ -59,7 +59,7 @@ const promptUser = projectDetails => {
         {
             type: 'input',
             name: 'usage',
-            message: 'Provide instructions and examples for use: (required)',
+            message: 'Provide instructions and examples for use for your project: (required)',
             validate: usageInput => {
                 if (usageInput) {
                     return true;
@@ -121,13 +121,13 @@ const promptUser = projectDetails => {
 };
 
 promptUser()
-.then(projectDetails => {
+.then(projectDetails=> {
     const readMeFile = generateMarkdown(projectDetails)
     fs.writeFile('./readMeOutput.md', readMeFile, err => {
         if (err) throw new Error(err);
         console.log('Page created! Check out readMeOutput in this directory to see it!');
-        console.log(projectDetails)
-        console.log(projectDetails.title) 
+        console.log(projectDetails);
+       
     })
 })
 
@@ -141,6 +141,7 @@ promptUser()
 //      -work on table of contents function in generateMarkdown
 //      -add to string for read me
 //      -figure out how link table of contents
+//      -work on table of contents only displaying selected options
 // -work on readme string output
 //      -start placing readme string output
 //      -add in date in string output
