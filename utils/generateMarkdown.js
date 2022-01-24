@@ -1,4 +1,4 @@
-const generateTableContents = confirmTableContent => {
+const generateTableContents = () => {
   if (!confirmTableContent) {
       return '';
   } else {
@@ -30,27 +30,30 @@ function renderLicenseSection(license) {}
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
+
   ## ${generateTableContents}
 
-  ## ${data.description}
+  ## Description
+  ${data.description}
 
-  ## ${data.description}
+  ## Installation
+  ${data.installation}
 
-  ## ${data.description}
+  ## Usage
+  ${data.usage}
 
-  ## ${data.description}
+  ## Credits
+  ${data.credits}
 
-  ## ${data.description}
+  ## Tests
+  ${data.tests}
 
-  ## ${data.description}
+  ## License
+  ${data.licenseType}
 
-  ## ${data.description}
-
-  ## ${data.description}
-
-  ## ${data.description}
-
-  
+  ## Questions/Reach-Me
+  ${data.github}
+ ${data.email}
 
 `;
 }

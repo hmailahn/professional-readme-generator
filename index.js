@@ -9,9 +9,9 @@ const fs = require('fs');
 
 
 
-const promptUser = ()=> {
+const promptUser = () => {
     ///if there's no 'projects arrway property, create on
-    
+
     return inquirer.prompt([
         {
             type: 'input',
@@ -94,6 +94,12 @@ const promptUser = ()=> {
             default: false
         },
         {
+            type: 'input',
+            name: 'tests',
+            message: 'Provide tests and how to run:',
+            when: ({ testsConfirm }) => testsConfirm
+        },
+        {
             type: 'checkbox',
             name: 'licenseType',
             message: 'Select a license for your project:',
@@ -121,33 +127,29 @@ const promptUser = ()=> {
 };
 
 promptUser()
-.then(projectDetails=> {
-    const readMeFile = generateMarkdown(projectDetails)
-    fs.writeFile('./readMeOutput.md', readMeFile, err => {
-        if (err) throw new Error(err);
-        console.log('Page created! Check out readMeOutput in this directory to see it!');
-        console.log(projectDetails);
-       
+    .then(projectDetails => {
+        const readMeFile = generateMarkdown(projectDetails)
+        fs.writeFile('./readMeOutput.md', readMeFile, err => {
+            if (err) throw new Error(err);
+            console.log('Page created! Check out readMeOutput in this directory to see it!');
+            console.log(projectDetails);
+
+        })
     })
-})
 
 // // TODO: Create a function to write README file
 // function writeToFile(fileName, data) { }
 
 
-//1/23 4:49pm - 
+//1/23 4:49pm -
 // -table of contents confirm-
-//      -take out input for table of contents 
+//      -take out input for table of contents
 //      -work on table of contents function in generateMarkdown
 //      -add to string for read me
 //      -figure out how link table of contents
-//      -work on table of contents only displaying selected options
-// -work on readme string output
-//      -start placing readme string output
-//      -add in date in string output
-//      -fix functions to write string output onto readme file
+//      -work on table of contents only displaying selected options --- considering doing this by breaking up things into different functions on if they should apppear?
 //-License (generateMarkdown file)
 //      -Create a function that returns a license badge based on which license is passed in
-//          -If there is no license, return an empty string 
+//          -If there is no license, return an empty string
 //      -Create a function that returns the license link
 //          -If there is no license, return an empty string
