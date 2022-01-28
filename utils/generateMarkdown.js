@@ -22,7 +22,10 @@ function renderLicenseBadge(data) {
     badge = "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)" 
   };
   return badge
+
 }
+
+
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -59,6 +62,7 @@ This project is covered under the ${data.licenseType} license. If you would like
 function generateMarkdown(data) {
   return `
   ${renderLicenseBadge(data.licenseType)}
+  ${badge}
   # ${data.title}
 
   ## Table of Contents:
