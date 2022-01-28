@@ -40,12 +40,6 @@ const promptUser = () => {
             }
         },
         {
-            type: 'confirm',
-            name: 'confirmTableContent',
-            message: 'Would you like to provide a table of contents?',
-            default: true
-        },
-        {
             type: 'input',
             name: 'installation',
             message: 'Provide a description on how a user would install your project:'
@@ -77,7 +71,7 @@ const promptUser = () => {
             type: 'checkbox',
             name: 'licenseType',
             message: 'Select a license for your project:',
-            choices: ['Apache', 'GNU GPL v3', 'MIT', 'ISC', 'Eclipse Public License v1.0, Mozilla Public License 2.0']
+            choices: ['Apache', 'GNU GPL v3', 'MIT', 'ISC', 'Eclipse Public License v1.0, Mozilla Public License 2.0, None']
         },
         {
             type: 'input',
