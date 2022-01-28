@@ -68,10 +68,10 @@ const promptUser = () => {
             message: 'Are there tests for your application?',
         },
         {
-            type: 'checkbox',
+            type: 'list',
             name: 'licenseType',
             message: 'Select a license for your project:',
-            choices: ['Apache', 'GNU GPL v3', 'MIT', 'ISC', 'Eclipse Public License v1.0, Mozilla Public License 2.0, None']
+            choices: ['Apache', 'GNU GPL v3', 'MIT', 'ISC', 'Eclipse Public License v1.0', 'Mozilla Public License 2.0', 'None']
         },
         {
             type: 'input',
@@ -94,6 +94,7 @@ const promptUser = () => {
     ]);
 };
 
+
 promptUser()
     .then(projectDetails => {
         const readMeFile = generateMarkdown(projectDetails)
@@ -104,6 +105,7 @@ promptUser()
 
         })
     })
+
 
 // // TODO: Create a function to write README file
 // function writeToFile(fileName, data) { }

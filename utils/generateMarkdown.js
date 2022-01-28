@@ -3,7 +3,8 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(data) {
-  const licenseBadge = data.licenseType
+  console.log(data.licenseType);
+ licenseBadge = data.licenseType;
   if (licenseBadge != 'None') {
     badge = ""
   }
@@ -26,8 +27,9 @@ function renderLicenseBadge(data) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(data) {
-  const licenseLink = data.licenseType
-  if (licenseType != 'None') {
+  
+  licenseLink = data.licenseType;
+  if (licenseLink != 'None') {
     link = ""
   }
   else if (licenseLink === 'Apache') {
@@ -50,13 +52,13 @@ function renderLicenseLink(data) {
 // If there is no license, return an empty string
 function renderLicenseSection(data, link) { 
 return `
-This project is covered under the ${licenseType} license. If you would like more information about this license here: ${link}`
+This project is covered under the ${data.licenseType} license. If you would like more information about this license here: `
 }
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data, badge) {
+function generateMarkdown(data) {
   return `
-  ${renderLicenseBadge(badge)}
+  ${renderLicenseBadge(data.licenseType)}
   # ${data.title}
 
   ## Table of Contents:
@@ -85,7 +87,8 @@ function generateMarkdown(data, badge) {
   ${data.tests}
 
   ## License
-  ${renderLicenseSection}
+  ${renderLicenseSection(data.licenseType)}
+  ${renderLicenseLink(data.licenseType)}
 
 
   ## Questions
