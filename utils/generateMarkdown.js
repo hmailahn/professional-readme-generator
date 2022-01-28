@@ -2,26 +2,37 @@
 
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(data) {
-  console.log(data.licenseType);
- licenseBadge = data.licenseType;
-  if (licenseBadge != 'None') {
-    badge = ""
-  }
-  else if (licenseBadge === 'Apache') {
-    badge = "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
-  } else if (licenseBadge === 'GNU GPL v3') {
-    badge = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
-  } else if (licenseBadge === 'MIT') {
-    badge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
-  } else if (licenseBadge === 'ISC') {
-    badge = "[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)"
-  } else if (licenseBadge === 'Eclipse Public License v1.0') {
-    badge = "[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)"
-  } else if (licenseBadge === 'Mozilla Public License 2.0') {
-    badge = "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)" 
-  };
-  return badge
+function renderLicenseBadge(licenseType) {
+//   console.log(data.licenseType);
+//  licenseBadge = data.licenseType;
+//   if (licenseBadge != 'None') {
+//     badge = ""
+//   }
+//   else if (licenseBadge === 'Apache') {
+//     badge = "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+//   } else if (licenseBadge === 'GNU GPL v3') {
+//     badge = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
+//   } else if (licenseBadge === 'MIT') {
+//     badge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
+//   } else if (licenseBadge === 'ISC') {
+//     badge = "[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)"
+//   } else if (licenseBadge === 'Eclipse Public License v1.0') {
+//     badge = "[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)"
+//   } else if (licenseBadge === 'Mozilla Public License 2.0') {
+//     badge = "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)" 
+//   };
+//   console.log(badge);
+//   return badge
+if (!licenseType){
+  // If there is no license, return an empty string
+  return "";
+} else {
+  // Return badge
+  // String manipulation for badge creation
+  license = licenseType.split(" ").join("%20");
+  //.replace(/ /g, "-");
+  return `![License for README](https://img.shields.io/badge/license-${license}-green/)`;
+}
 
 }
 
@@ -29,7 +40,7 @@ function renderLicenseBadge(data) {
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(data) {
+function renderLicenseLink(data, link) {
   
   licenseLink = data.licenseType;
   if (licenseLink != 'None') {
@@ -59,10 +70,10 @@ This project is covered under the ${data.licenseType} license. If you would like
 }
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
+function generateMarkdown(data, badge) {
   return `
   ${renderLicenseBadge(data.licenseType)}
-  ${badge}
+  
   # ${data.title}
 
   ## Table of Contents:
