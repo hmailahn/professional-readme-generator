@@ -1,40 +1,52 @@
-# Generator
+# Read me
 
-  ## () => {
-  if (!confirmTableContent) {
-      return '';
-  } else {
-  return `
-  # Table of Contents
-  1. Project Description
-  2. Installation
-  3. Usage
-  4. License
-  5. Credits
-  6. Tests
-  7. Questions/Reach Me`
-}
-}
+  # Table of Contents:
+  1. [Description](#description)
+  2. [Installation](#install)
+  3. [Usage](#usage)
+  4. [License](#license)
+  5. [Credits](#credits)
+  6. [Testss](#tests)
+  7. [Questions/Reach-Me](#questions)
 
-  ## Description
-  genteraot that
+  # <a id="description">
+  Description
+  </a>
 
-  ## Installation
-  instal it like ths
+  readme generateor that does this and that
 
-  ## Usage
-  hree
+  # <a id="install">
+  Installation
+  </a>
 
-  ## Credits
-  undefined
+  here is how you would instal
 
-  ## Tests
-  undefined
+  # <a id="usage">
+  Usage
+  </a>
 
-  ## License
-  
+  here is hwo you would use the projecy
 
-  ## Questions/Reach-Me
-  hmailahn
- mailahnheidi
+  # <a id="credits">
+  Credits
+  </a>
+
+  heidi
+
+  # <a id="tests">
+  Tests </a>
+  here they are
+
+  # <a id="license"> 
+  License
+  </a>
+
+  MIT
+
+
+  # <a id="questions">
+  Questions/Reach-Me
+  </a>
+  Reach me at https://github.com/hmailahn
+  and: mailahnheidi@gmail.com
 

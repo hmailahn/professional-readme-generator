@@ -1,23 +1,10 @@
-const generateTableContents = () => {
-  if (!confirmTableContent) {
-      return '';
-  } else {
-  return `
-  # Table of Contents
-  1. Project Description
-  2. Installation
-  3. Usage
-  4. License
-  5. Credits
-  6. Tests
-  7. Questions/Reach Me`
-}
-};
 
 
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+// function renderLicenseBadge(data) {
+//   if (data.licenseType.choices)
+// }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -31,29 +18,55 @@ function renderLicenseSection(license) {}
 function generateMarkdown(data) {
   return `# ${data.title}
 
-  ## ${generateTableContents}
+  # Table of Contents:
+  1. [Description](#description)
+  2. [Installation](#install)
+  3. [Usage](#usage)
+  4. [License](#license)
+  5. [Credits](#credits)
+  6. [Testss](#tests)
+  7. [Questions/Reach-Me](#questions)
 
-  ## Description
+  # <a id="description">
+  Description
+  </a>
+
   ${data.description}
 
-  ## Installation
+  # <a id="install">
+  Installation
+  </a>
+
   ${data.installation}
 
-  ## Usage
+  # <a id="usage">
+  Usage
+  </a>
+
   ${data.usage}
 
-  ## Credits
+  # <a id="credits">
+  Credits
+  </a>
+
   ${data.credits}
 
-  ## Tests
+  # <a id="tests">
+  Tests </a>
   ${data.tests}
 
-  ## License
+  # <a id="license"> 
+  License
+  </a>
+
   ${data.licenseType}
 
-  ## Questions/Reach-Me
-  ${data.github}
- ${data.email}
+
+  # <a id="questions">
+  Questions/Reach-Me
+  </a>
+  Reach me at https://github.com/${data.github}
+  and: ${data.email}
 
 `;
 }

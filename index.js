@@ -16,7 +16,7 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'title',
-            message: 'What is the title of your Project? (required)',
+            message: 'What is the title of your Project?',
             validate: nameInput => {
                 if (nameInput) {
                     return true;
@@ -29,7 +29,7 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'description',
-            message: 'Provide a description of the project (Required)',
+            message: 'Provide a description of the project:',
             validate: descriptionInput => {
                 if (descriptionInput) {
                     return true;
@@ -47,19 +47,13 @@ const promptUser = () => {
         },
         {
             type: 'input',
-            name: 'tableContent',
-            message: 'Add table of contents:',
-            when: ({ confirmTableContent }) => confirmTableContent
-        },
-        {
-            type: 'input',
             name: 'installation',
             message: 'Provide a description on how a user would install your project:'
         },
         {
             type: 'input',
             name: 'usage',
-            message: 'Provide instructions and examples for use for your project: (required)',
+            message: 'Provide instructions and examples for use for your project:',
             validate: usageInput => {
                 if (usageInput) {
                     return true;
@@ -70,40 +64,20 @@ const promptUser = () => {
             }
         },
         {
-            type: 'confirm',
-            name: 'confirmCredits',
-            message: 'Would you like to add any contributors?',
-            default: false
-        },
-        {
             type: 'input',
             name: 'credits',
-            message: 'Provide contributors name:',
-            when: ({ confirmCredits }) => confirmCredits
-        },
-        {
-            type: 'input',
-            name: 'contributorsGitHub',
-            message: 'Provide contributors github username:',
-            when: ({ confirmCredits }) => confirmCredits
-        },
-        {
-            type: 'confirm',
-            name: 'testsConfirm',
-            message: 'Would you like to write any tests for your application and how to run it?',
-            default: false
+            message: 'Provide any contributors name and github:',
         },
         {
             type: 'input',
             name: 'tests',
-            message: 'Provide tests and how to run:',
-            when: ({ testsConfirm }) => testsConfirm
+            message: 'Are there tests for your application?',
         },
         {
             type: 'checkbox',
             name: 'licenseType',
             message: 'Select a license for your project:',
-            choices: ['MIT', 'Apache', 'GPL', 'Affero GPL', 'Artistic License 2.0', 'Mozilla Public License Version 2.0', 'Eclipse Public License v1.0']
+            choices: ['Apache', 'GNU GPL v3', 'MIT', 'ISC', 'Eclipse Public License v1.0, Mozilla Public License 2.0']
         },
         {
             type: 'input',
