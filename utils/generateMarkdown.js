@@ -16,30 +16,29 @@ if (!licenseType){
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(data, link) {
+function renderLicenseLink(licenseType) {
   
-  licenseLink = data.licenseType;
-  if (licenseLink != 'None') {
+  license = licenseType.split(' ').join(' ');
+  if (license != 'None') {
     link = "";
     return link;
   }
-  else if (licenseLink === 'Apache') {
-    link = "https://www.apache.org/licenses/LICENSE-2.0"
+  else if (license === 'Apache') {
+    link = `https://www.apache.org/licenses/LICENSE-2.0`
     return link;
-  } else if (licenseLink === 'GNU GPL v3') {
-    link = "https://choosealicense.com/licenses/gpl-3.0/"
+  } else if (license === 'GNU GPL v3') {
+    link = `https://choosealicense.com/licenses/gpl-3.0/`
     return link;
-  } else if (licenseLink === 'MIT') {
-    link = "https://choosealicense.com/licenses/mit/"
+  } else if (license === 'MIT') {
+    link = `https://choosealicense.com/licenses/mit/`
     return link;
-  } else if (licenseLink === 'ISC') {
-    link = "https://choosealicense.com/licenses/isc/"
+  } else if (license === 'ISC') {
+    link = `https://choosealicense.com/licenses/isc/`
     return link;
-  } else if (licenseLink === 'Mozilla Public License 2.0') {
-    link = "https://opensource.org/licenses/MPL-2.0"
+  } else if (license === 'Mozilla Public License 2.0') {
+    link = `https://opensource.org/licenses/MPL-2.0`
     return link;
   };
-  return link
 }
 
 // TODO: Create a function that returns the license section of README

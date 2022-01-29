@@ -1,7 +1,7 @@
 
-  ![License for README](https://img.shields.io/badge/license-Eclipse Public License v1.0-green/)
+  ![License for README](https://img.shields.io/badge/license-MIT-green/)
   
-  # fdkgkfg
+  # gfdkgjfdkg
 
   ## Table of Contents:
   1. [Description](#Description)
@@ -13,28 +13,28 @@
   7. [Questions](#Questions)
 
   ## Description
-  gkjfdgj
+  lgkjfdgjfd
 
   ## Installation
-  kjfgkfjg
+  gkfdgjfd;g'
 
   ## Usage
-  kjfgkfd
+  gfdjkfkdgjfd
 
   ## Credits
   Contributors and Githubs:
-  kfjgkfdjg
+  gfgkjfdgjfd;lkg
 
   ## Tests 
-  kjfgkfdjg
+  fkgjfdkg
 
   ## License
   
-This project is covered under the Eclipse Public License v1.0 license. If you would like more information about this license here: 
+This project is covered under the MIT license. If you would like more information about this license here: 
   
 
 
   ## Questions
-  Reach me at https://github.com/dfgfd
-  and: fg
+  Reach me at https://github.com/gjdfgijfdg
+  and: fkgjfkgj
 
