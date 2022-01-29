@@ -1,7 +1,7 @@
 
-  ![License for README](https://img.shields.io/badge/license-ISC-green/)
+  ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
   
-  # test
+  # ReadMe Generator
 
   ## Table of Contents:
   1. [Description](#Description)
@@ -13,25 +13,25 @@
   7. [Questions](#Questions)
 
   ## Description
-  test
+  ReadMe generator 
 
   ## Installation
-  test
+  ReadMe generator
 
   ## Usage
-  test
+  here are some examples:
 
   ## Credits
   Contributors and Githubs:
-  test
+  here are the contributors
 
   ## Tests 
-  test
+  here are the tests
 
   ## License
   
-This project is covered under the ISC license. If you would like more information about this license click here: 
-  https://choosealicense.com/licenses/isc/
+This project is covered under the MIT license. If you would like more information about this license click here: 
+  https://choosealicense.com/licenses/mit/
 
 
   ## Questions
