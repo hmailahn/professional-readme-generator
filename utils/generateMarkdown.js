@@ -19,25 +19,25 @@ if (!licenseType){
 function renderLicenseLink(licenseType) {
   
   license = licenseType.split(' ').join(' ');
-  if (license != 'None') {
-    link = "";
-    return link;
+  if (!licenseType) {
+    return '';
+    
   }
   else if (license === 'Apache') {
-    link = `https://www.apache.org/licenses/LICENSE-2.0`
-    return link;
+    return `https://www.apache.org/licenses/LICENSE-2.0`
+  
   } else if (license === 'GNU GPL v3') {
-    link = `https://choosealicense.com/licenses/gpl-3.0/`
-    return link;
+    return `https://choosealicense.com/licenses/gpl-3.0/`
+  
   } else if (license === 'MIT') {
-    link = `https://choosealicense.com/licenses/mit/`
-    return link;
+    return `https://choosealicense.com/licenses/mit/`
+ 
   } else if (license === 'ISC') {
-    link = `https://choosealicense.com/licenses/isc/`
-    return link;
+    return `https://choosealicense.com/licenses/isc/`
+  
   } else if (license === 'Mozilla Public License 2.0') {
-    link = `https://opensource.org/licenses/MPL-2.0`
-    return link;
+    return `https://opensource.org/licenses/MPL-2.0`
+   
   };
 }
 
@@ -45,8 +45,12 @@ function renderLicenseLink(licenseType) {
 // If there is no license, return an empty string
 function renderLicenseSection(licenseType) { 
   license = licenseType.split(' ').join(' ');
+  if (!licenseType) {
+      return '';
+  } else {
 return `
-This project is covered under the ${license} license. If you would like more information about this license here: `
+This project is covered under the ${license} license. If you would like more information about this license click here: `
+}
 }
 
 // TODO: Create a function to generate markdown for README
