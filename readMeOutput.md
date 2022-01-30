@@ -19,7 +19,7 @@
   test
 
   ## Usage
-  tes
+  test
 
   ## Credits
   Contributors and Githubs:
